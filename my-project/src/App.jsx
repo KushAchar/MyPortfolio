@@ -1,118 +1,134 @@
-import './App.css'
+import "./App.css";
 
 function App() {
   return (
-    <main className="portfolio">
-      <header className="hero-section">
-        <div className="hero-copy">
-          <span className="eyebrow">Full-stack web developer</span>
-          <h1>Kush R Acharya</h1>
-          <p>
-            Computer Science Engineering student building polished web experiences with React,
-            Node.js, and modern database workflows. Passionate about clean design, scalable systems,
-            and impactful user journeys.
+    <div className="app">
+
+      <nav className="navbar">
+        <div className="logo">Kush Acharya</div>
+
+        <div className="nav-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <section className="hero">
+
+        <div className="hero-content">
+          <span className="hero-badge">
+            Full Stack Developer
+          </span>
+
+          <h1>
+            Building Digital
+            <span> Experiences </span>
+            That Matter
+          </h1>
+
+          <p className="hero-desc">
+            Computer Science Engineering student passionate
+            about Full Stack Development, Problem Solving,
+            Databases and creating impactful web applications.
           </p>
-          <div className="hero-actions">
-            <a href="https://github.com/KushAchar" target="_blank" rel="noreferrer">GitHub</a>
-            <a href="https://linkedin.com/in/kushacharya" target="_blank" rel="noreferrer">LinkedIn</a>
+
+          <div className="hero-buttons">
+            <a href="#projects" className="primary-btn">
+              View Projects
+            </a>
+
+            <a
+              href="https://github.com/KushAchar"
+              target="_blank"
+              rel="noreferrer"
+              className="secondary-btn"
+            >
+              GitHub
+            </a>
           </div>
         </div>
-        <div className="hero-card">
-          <div className="hero-card-inner">
-            <p className="hero-tag">About</p>
-            <h2>Student | Developer | Innovator</h2>
-            <ul>
-              <li>Strong academic performance in B.Tech CSE</li>
-              <li>Hands-on full-stack web applications</li>
-              <li>Reliable, collaborative, and eager to learn</li>
-            </ul>
+
+      </section>
+
+      <section id="about" className="section">
+        <h2>About Me</h2>
+
+        <p>
+          I'm Kush Acharya, a Computer Science Engineering
+          student with strong interests in Full Stack
+          Development, Software Engineering, Database
+          Management Systems and scalable web applications.
+        </p>
+      </section>
+
+      <section id="skills" className="section">
+        <h2>Tech Stack</h2>
+
+        <div className="skills-grid">
+          {[
+            "Python",
+            "Java",
+            "C++",
+            "JavaScript",
+            "React",
+            "Node.js",
+            "MongoDB",
+            "MySQL",
+            "Spring Boot",
+            "Git",
+            "Postman",
+            "Linux",
+          ].map((skill) => (
+            <div key={skill} className="skill-card">
+              {skill}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="projects" className="section">
+        <h2>Featured Projects</h2>
+
+        <div className="projects-grid">
+
+          <div className="project-card">
+            <h3>Smart Network Monitoring</h3>
+            <p>
+              Real-time network monitoring dashboard built
+              using React, Node.js and MongoDB.
+            </p>
           </div>
-        </div>
-      </header>
 
-      <section className="section about">
-        <div>
-          <h2>Education</h2>
-          <p>
-            B.Tech in Computer Science and Engineering, NMAM Institute of Technology, Nitte.
-            Current CGPA: 8.25.
-          </p>
-          <p>
-            Strong foundation in algorithms, databases, and web systems built through
-            academic projects and extracurricular leadership.
-          </p>
-        </div>
-        <div className="stats-grid">
-          <article>
-            <h3>93.66%</h3>
-            <p>Pre-University at Poorna Prajna PU College</p>
-          </article>
-          <article>
-            <h3>85.6%</h3>
-            <p>Secondary schooling at Poorna Prajna English Medium School</p>
-          </article>
-        </div>
-      </section>
-
-      <section className="section skills">
-        <h2>Technical Skills</h2>
-        <div className="chips">
-          <span>C</span>
-          <span>C++</span>
-          <span>Python</span>
-          <span>Java</span>
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>React</span>
-          <span>Node.js</span>
-          <span>Spring Boot</span>
-          <span>MongoDB</span>
-          <span>MySQL</span>
-          <span>PgAdmin</span>
-          <span>GitHub</span>
-          <span>Postman</span>
-        </div>
-      </section>
-
-      <section className="section projects">
-        <h2>Selected Projects</h2>
-        <div className="project-list">
-          <article>
-            <h3>Smart Network Monitoring System</h3>
+          <div className="project-card">
+            <h3>Hospital Management System</h3>
             <p>
-              Web app for monitoring network devices and health status with REST APIs
-              built in Node.js and MongoDB, plus a responsive React dashboard with
-              light and dark mode support.
+              End-to-end healthcare workflow and patient
+              management platform.
             </p>
-          </article>
-          <article>
-            <h3>Real Estate Listings Platform</h3>
+          </div>
+
+          <div className="project-card">
+            <h3>Real Estate Platform</h3>
             <p>
-              Scalable JSF-based real estate platform with authentication,
-              role-based access, dynamic search, filters, and a polished buyer/seller experience.
+              Property listing and role-based management
+              system with advanced search features.
             </p>
-          </article>
+          </div>
+
         </div>
       </section>
 
-      <section className="section extras">
-        <div>
-          <h2>Leadership &amp; Activities</h2>
-          <ul>
-            <li>Black belt in karate</li>
-            <li>Crew committee member at INCREDIA tech-cultural fest</li>
-            <li>Active participant in HackerEarth, Tudar, and Rachana clubs</li>
-          </ul>
-        </div>
-        <div>
-          <h2>Contact</h2>
-          <p>Phone: +91-7204470562</p>
-          <p>Email: <a href="mailto:khushchr@gmail.com">khushchr@gmail.com</a></p>
-        </div>
+      <section id="contact" className="section contact">
+        <h2>Let's Connect</h2>
+
+        <p>Email: khushchr@gmail.com</p>
+        <p>Phone: +91 7204470562</p>
       </section>
-    </main>
-  )
+
+    </div>
+  );
 }
 
-export default App
+export default App;
