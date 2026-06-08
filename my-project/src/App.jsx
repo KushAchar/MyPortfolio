@@ -1,121 +1,117 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
+    <main className="portfolio">
+      <header className="hero-section">
+        <div className="hero-copy">
+          <span className="eyebrow">Full-stack web developer</span>
+          <h1>Kush R Acharya</h1>
           <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+            Computer Science Engineering student building polished web experiences with React,
+            Node.js, and modern database workflows. Passionate about clean design, scalable systems,
+            and impactful user journeys.
+          </p>
+          <div className="hero-actions">
+            <a href="https://github.com/KushAchar" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/kushacharya" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+        <div className="hero-card">
+          <div className="hero-card-inner">
+            <p className="hero-tag">About</p>
+            <h2>Student | Developer | Innovator</h2>
+            <ul>
+              <li>Strong academic performance in B.Tech CSE</li>
+              <li>Hands-on full-stack web applications</li>
+              <li>Reliable, collaborative, and eager to learn</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <section className="section about">
+        <div>
+          <h2>Education</h2>
+          <p>
+            B.Tech in Computer Science and Engineering, NMAM Institute of Technology, Nitte.
+            Current CGPA: 8.25.
+          </p>
+          <p>
+            Strong foundation in algorithms, databases, and web systems built through
+            academic projects and extracurricular leadership.
           </p>
         </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+        <div className="stats-grid">
+          <article>
+            <h3>93.66%</h3>
+            <p>Pre-University at Poorna Prajna PU College</p>
+          </article>
+          <article>
+            <h3>85.6%</h3>
+            <p>Secondary schooling at Poorna Prajna English Medium School</p>
+          </article>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <section className="section skills">
+        <h2>Technical Skills</h2>
+        <div className="chips">
+          <span>C</span>
+          <span>C++</span>
+          <span>Python</span>
+          <span>Java</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>React</span>
+          <span>Node.js</span>
+          <span>Spring Boot</span>
+          <span>MongoDB</span>
+          <span>MySQL</span>
+          <span>PgAdmin</span>
+          <span>GitHub</span>
+          <span>Postman</span>
+        </div>
+      </section>
+
+      <section className="section projects">
+        <h2>Selected Projects</h2>
+        <div className="project-list">
+          <article>
+            <h3>Smart Network Monitoring System</h3>
+            <p>
+              Web app for monitoring network devices and health status with REST APIs
+              built in Node.js and MongoDB, plus a responsive React dashboard with
+              light and dark mode support.
+            </p>
+          </article>
+          <article>
+            <h3>Real Estate Listings Platform</h3>
+            <p>
+              Scalable JSF-based real estate platform with authentication,
+              role-based access, dynamic search, filters, and a polished buyer/seller experience.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="section extras">
+        <div>
+          <h2>Leadership &amp; Activities</h2>
+          <ul>
+            <li>Black belt in karate</li>
+            <li>Crew committee member at INCREDIA tech-cultural fest</li>
+            <li>Active participant in HackerEarth, Tudar, and Rachana clubs</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <p>Phone: +91-7204470562</p>
+          <p>Email: <a href="mailto:khushchr@gmail.com">khushchr@gmail.com</a></p>
+        </div>
+      </section>
+    </main>
   )
 }
 
